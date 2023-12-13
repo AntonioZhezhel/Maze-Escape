@@ -17,7 +17,7 @@ public class MazeGeneratorWalls
 
 public class MazeGenerator : MonoBehaviour
 {
-    public int widthMaze = 10;
+    public int widthMaze = 15;
     public int heightMaze = 10;
 
     private MazeGeneratorWalls farthest;
@@ -129,13 +129,15 @@ public class MazeGenerator : MonoBehaviour
 
     private void Finish(MazeGeneratorWalls[,] maze)
     {
-        farthest = maze[0, 0];
+        //farthest = maze[0, 0];
+
+         farthest = maze[0, 0];
 
         for (int x = 0; x < maze.GetLength(0); x++)
         {
-            if (maze[x, heightMaze - 2].distanceFromStart > farthest.distanceFromStart)
+            if (maze[x, maze.GetLength(1) - 2].distanceFromStart > farthest.distanceFromStart)
             {
-                farthest = maze[x, heightMaze - 2];
+                farthest = maze[x, maze.GetLength(1) - 2];
             }
 
             if (maze[x, 0].distanceFromStart > farthest.distanceFromStart)
@@ -144,11 +146,11 @@ public class MazeGenerator : MonoBehaviour
             }
         }
 
-        for (int y = 0; y < maze.GetLength(0); y++)
+        for (int y = 0; y < maze.GetLength(1); y++)
         {
-            if (maze[widthMaze - 2, y].distanceFromStart > farthest.distanceFromStart)
+            if (maze[maze.GetLength(0) - 2, y].distanceFromStart > farthest.distanceFromStart)
             {
-                farthest = maze[widthMaze - 2, y];
+                farthest = maze[maze.GetLength(0) - 2, y];
             }
 
             if (maze[0, y].distanceFromStart > farthest.distanceFromStart)
