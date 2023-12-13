@@ -7,16 +7,11 @@ namespace MazeEscape
     {
         [SerializeField] private GameObject wallPrefab;
         [SerializeField] private GameObject finish;
-        [SerializeField] private GameObject Player;
-        
 
         private void Start()
         {
             MazeGenerator mazeGenerator = new MazeGenerator();
             MazeGeneratorWalls[,] maze = mazeGenerator.GenerateMaze();
-            
-            Player.transform.position = new Vector3(- (mazeGenerator.widthMaze -1)/2f,
-                - (mazeGenerator.heightMaze-1)/2f);
             
             for (int x = 0; x < maze.GetLength(0); x++)
             {

@@ -5,6 +5,15 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private float speed = 10;
+    
+    void Start()
+    {
+        MazeGenerator mazeGenerator = new MazeGenerator();
+            
+        transform.position = new Vector3(- (mazeGenerator.widthMaze -1)/2f,
+            - (mazeGenerator.heightMaze-1)/2f); 
+    }
+    
     void Update()
     {
         float x = Input.GetAxis("Horizontal");
