@@ -29,8 +29,8 @@ namespace MazeEscape
                     IsDistanceEnough(new Vector2(x, y), createdPositions, minDistanceBetweenEnemies)&&
                     Vector2.Distance(new Vector2(x, y), Player.transform.position) > minDistanceToPlayer)
                 {
-                    Instantiate(enemyPrefab, new Vector3(x - (mazeGenerator.widthMaze - 1) / 2f,
-                        y - (mazeGenerator.heightMaze - 1) / 2f, 0), Quaternion.identity);
+                    Instantiate(enemyPrefab, new Vector3(x - (mazeGenerator.widthMaze) / 2f,
+                        y - (mazeGenerator.heightMaze ) / 2f, 0), Quaternion.identity);
 
                     createdPositions.Add(new Vector2(x, y));
                     enemiesCreated++;
