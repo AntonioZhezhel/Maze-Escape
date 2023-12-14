@@ -129,8 +129,6 @@ public class MazeGenerator : MonoBehaviour
 
     private void Finish(MazeGeneratorWalls[,] maze)
     {
-        //farthest = maze[0, 0];
-
          farthest = maze[0, 0];
 
         for (int x = 0; x < maze.GetLength(0); x++)

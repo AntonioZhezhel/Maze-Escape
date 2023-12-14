@@ -27,7 +27,7 @@ namespace MazeEscape
             
             MazeGeneratorWalls finishCell = mazeGenerator.GetFarthestCell();
             float rotation = 0 ;
-            if (finishCell.x != 0 && finishCell.x != mazeGenerator.widthMaze -1  )
+            if (finishCell.x != 0 && finishCell.x != mazeGenerator.widthMaze -1)
             {
                rotation = -90; 
             }
