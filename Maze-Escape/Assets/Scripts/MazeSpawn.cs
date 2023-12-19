@@ -1,4 +1,4 @@
-
+using NavMeshPlus.Components;
 using UnityEngine;
 
 namespace MazeEscape
@@ -7,6 +7,7 @@ namespace MazeEscape
     {
         [SerializeField] private GameObject wallPrefab;
         [SerializeField] private GameObject finish;
+        [SerializeField] private NavMeshSurface navMeshSurface;
 
         private void Start()
         {
@@ -24,6 +25,8 @@ namespace MazeEscape
                     walls.wallBottom.SetActive(maze[x, y].WallBottom);
                 }
             }
+            navMeshSurface.BuildNavMesh();
+            
             
             MazeGeneratorWalls finishCell = mazeGenerator.GetFarthestCell();
             float rotation = 0 ;

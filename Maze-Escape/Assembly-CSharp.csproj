@@ -42,8 +42,41 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Enemy.cs" />
+     <Compile Include="Assets\Scripts\EnemyPatrol.cs" />
      <Compile Include="Assets\Scripts\EnemySpawn.cs" />
      <Compile Include="Assets\Scripts\MazeGenerator.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Editor\AgentOverride2dEditor.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Editor\CollectSources2dEditor.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Editor\CollectSourcesCache2dEditor.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Editor\NavMeshAgentAttributePropertyDrawer.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Editor\NavMeshAreaAttributePropertyDrawer.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Editor\NavMeshAssetManager.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Editor\NavMeshComponentsGUIUtility.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Editor\NavMeshLinkEditor.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Editor\NavMeshModifierEditor.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Editor\NavMeshModifierTilemapEditor.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Editor\NavMeshModifierVolumeEditor.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Editor\NavMeshSurfaceEditor.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Editor\RootSources2dEditor.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Scripts\AgentOverride2d.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Scripts\AgentRotate2d.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Scripts\AgentRotateSmooth2d.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Scripts\CollectSources2d.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Scripts\CollectSourcesCache2d.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Scripts\NavMeshAgentAttribute.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Scripts\NavMeshAreaAttribute.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Scripts\NavMeshBuilder2d.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Scripts\NavMeshBuilderState.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Scripts\NavMeshExtension.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Scripts\NavMeshExtensionsProvider.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Scripts\NavMeshLink.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Scripts\NavMeshModifier.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Scripts\NavMeshModifierTilemap.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Scripts\NavMeshModifierVolume.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Scripts\NavMeshSurface.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Scripts\RootSources2d.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Scripts\RotateAgentInstantly.cs" />
+     <Compile Include="Assets\Scripts\NavMeshComponents\Scripts\RotateAgentSmoothly.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\MazeSpawn.cs" />
      <Compile Include="Assets\Scripts\Walls.cs" />
@@ -817,6 +850,44 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Scripts\NavMeshComponents\Editor.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Editor\AgentOverride2dEditor.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Editor\CollectSources2dEditor.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Editor\CollectSourcesCache2dEditor.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Editor\NavMeshAgentAttributePropertyDrawer.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Editor\NavMeshAreaAttributePropertyDrawer.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Editor\NavMeshAssetManager.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Editor\NavMeshComponentsEditor.asmdef" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Editor\NavMeshComponentsEditor.asmdef.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Editor\NavMeshComponentsGUIUtility.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Editor\NavMeshLinkEditor.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Editor\NavMeshModifierEditor.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Editor\NavMeshModifierTilemapEditor.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Editor\NavMeshModifierVolumeEditor.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Editor\NavMeshSurfaceEditor.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Editor\RootSources2dEditor.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Scripts.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Scripts\AgentOverride2d.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Scripts\AgentRotate2d.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Scripts\AgentRotateSmooth2d.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Scripts\CollectSources2d.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Scripts\CollectSourcesCache2d.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Scripts\NavMeshAgentAttribute.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Scripts\NavMeshAreaAttribute.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Scripts\NavMeshBuilder2d.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Scripts\NavMeshBuilderState.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Scripts\NavMeshComponents.asmdef" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Scripts\NavMeshComponents.asmdef.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Scripts\NavMeshExtension.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Scripts\NavMeshExtensionsProvider.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Scripts\NavMeshLink.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Scripts\NavMeshModifier.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Scripts\NavMeshModifierTilemap.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Scripts\NavMeshModifierVolume.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Scripts\NavMeshSurface.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Scripts\RootSources2d.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Scripts\RotateAgentInstantly.cs.meta" />
+    <Content Include="Assets\Scripts\NavMeshComponents\Scripts\RotateAgentSmoothly.cs.meta" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

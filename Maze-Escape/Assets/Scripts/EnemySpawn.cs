@@ -47,7 +47,6 @@ namespace MazeEscape
                     return false; 
                 }
             }
-
             return true;
         }
 
