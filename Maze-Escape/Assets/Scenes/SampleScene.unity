@@ -171,7 +171,7 @@ MonoBehaviour:
   Player: {fileID: 1668250971}
   numberOfEnemies: 10
   minDistanceBetweenEnemies: 2
-  minDistanceToPlayer: 5
+  minDistanceToPlayer: 2
 --- !u!1 &394819668
 GameObject:
   m_ObjectHideFlags: 0
