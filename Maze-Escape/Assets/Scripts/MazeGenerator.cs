@@ -173,9 +173,7 @@ public class MazeGenerator : MonoBehaviour
         {
             maze[farthest.x, farthest.y + 1].WallBottom = false;
             farthest = maze[farthest.x, farthest.y + 1];
-
         }
-
     }
     
     public MazeGeneratorWalls GetFarthestCell()

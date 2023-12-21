@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace MazeEscape
@@ -7,9 +8,9 @@ namespace MazeEscape
     {
         [SerializeField] private GameObject enemyPrefab;
         [SerializeField] private GameObject Player;
-        [SerializeField] private int numberOfEnemies = 5;
-        [SerializeField] private float minDistanceBetweenEnemies = 2f;
-        [SerializeField] private float minDistanceToPlayer  = 2f;
+        [SerializeField] private int numberOfEnemies ;
+        [SerializeField] private float minDistanceBetweenEnemies ;
+        [SerializeField] private float minDistanceToPlayer;
 
         private void Start()
         {
@@ -29,8 +30,8 @@ namespace MazeEscape
                     IsDistanceEnough(new Vector2(x, y), createdPositions, minDistanceBetweenEnemies)&&
                     Vector2.Distance(new Vector2(x, y), Player.transform.position) > minDistanceToPlayer)
                 {
-                    Instantiate(enemyPrefab, new Vector3(x - (mazeGenerator.widthMaze) / 2f,
-                        y - (mazeGenerator.heightMaze ) / 2f, 0), Quaternion.identity);
+                    Instantiate(enemyPrefab, new Vector3(x - (mazeGenerator.widthMaze-1) / 2f,
+                        y - (mazeGenerator.heightMaze-1 ) / 2f, 0), Quaternion.identity);
 
                     createdPositions.Add(new Vector2(x, y));
                     enemiesCreated++;
@@ -40,14 +41,7 @@ namespace MazeEscape
         
         private bool IsDistanceEnough(Vector2 currentPosition, List<Vector2> createdPositions, float minDistance)
         {
-            foreach (Vector2 position in createdPositions)
-            {
-                if (Vector2.Distance(currentPosition, position) < minDistance)
-                {
-                    return false; 
-                }
-            }
-            return true;
+            return createdPositions.All(position => !(Vector2.Distance(currentPosition, position) < minDistance));
         }
 
     }

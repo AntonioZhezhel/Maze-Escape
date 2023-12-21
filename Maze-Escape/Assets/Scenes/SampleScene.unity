@@ -169,7 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 2692531452982836839, guid: 78435ea0cf027dc4f851081ec024668b, type: 3}
   Player: {fileID: 1668250971}
-  numberOfEnemies: 5
+  numberOfEnemies: 10
   minDistanceBetweenEnemies: 2
   minDistanceToPlayer: 5
 --- !u!1 &394819668
@@ -250,7 +250,7 @@ MonoBehaviour:
   m_VoxelSize: 0.036666665
   m_BuildHeightMesh: 0
   m_HideEditorLogs: 0
-  m_NavMeshData: {fileID: 23800000, guid: 76b7411cd54952e4bb580650c5ebeb05, type: 2}
+  m_NavMeshData: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -458,7 +458,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.3773585, g: 0.11178354, b: 0.34728447, a: 1}
   m_FlipX: 0
@@ -483,9 +483,9 @@ GameObject:
   - component: {fileID: 1668250973}
   - component: {fileID: 1668250972}
   - component: {fileID: 1668250976}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -606,7 +606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a16d630a59efa774aa3d39c20e88d28d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 6
 --- !u!1 &1793446296
 GameObject:
   m_ObjectHideFlags: 0
