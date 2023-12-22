@@ -144,6 +144,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   visionRadius: 5
+  attackRadius: 3
+  attackDamage: 10
+  intervalDamage: 2
   navMeshAgent: {fileID: 3839773266201146576}
 --- !u!114 &6554152395695757163
 MonoBehaviour:
