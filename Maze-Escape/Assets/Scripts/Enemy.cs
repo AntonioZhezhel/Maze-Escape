@@ -12,21 +12,23 @@ namespace MazeEscape
         [SerializeField] private NavMeshAgent navMeshAgent;
 
         private GameObject player;
-        private float timeSinceLastDamage;
+        private VisionDetector visionDetector;
 
         private void Start()
         {
             player = GameObject.FindGameObjectWithTag("Player");
-            timeSinceLastDamage = intervalDamage;
 
             transform.rotation = Quaternion.Euler(0, 0, 0);
             navMeshAgent.updateRotation = false;
             navMeshAgent.updateUpAxis = false;
+            
+            visionDetector = new VisionDetector(
+                transform, player, visionRadius, attackRadius, attackDamage, intervalDamage);
         }
 
         private void Update()
         {
-            if (IsPlayerInVisionRadius())
+            if (visionDetector.IsPlayerVisible())
             {
                 MoveTowardsPlayer();
             }
@@ -35,43 +37,6 @@ namespace MazeEscape
         private void MoveTowardsPlayer()
         {
             navMeshAgent.SetDestination(player.transform.position);
-        }
-
-        private bool IsPlayerInVisionRadius()
-        {
-            if (player == null)
-            {
-                return false;
-            }
-
-            Vector2 direction = player.transform.position - transform.position;
-            float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
-
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, visionRadius,
-                LayerMask.GetMask("Wall", "Player"));
-
-            if (hit.collider != null && hit.collider.gameObject.CompareTag("Player"))
-            {
-                if (distanceToPlayer <= attackRadius)
-                {
-                    Damage();
-                }
-
-                return true;
-            }
-
-            return false;
-        }
-
-        private void Damage()
-        {
-            timeSinceLastDamage += Time.deltaTime;
-            if (timeSinceLastDamage >= intervalDamage)
-            {
-                timeSinceLastDamage = 0f;
-                Player playerHealth = player.GetComponent<Player>();
-                playerHealth.TakeDamage(attackDamage);
-            }
         }
     }
 }

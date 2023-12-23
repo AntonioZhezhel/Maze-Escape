@@ -52,6 +52,8 @@
     <Compile Include="Assets\Scripts\DataHolder.cs" />
     <Compile Include="Assets\Scripts\DataReceiver.cs" />
     <Compile Include="Assets\Scripts\Menu.cs" />
+    <Compile Include="Assets\Scripts\VisionDetector.cs" />
+    <Compile Include="Assets\Scripts\DamageDealer.cs" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

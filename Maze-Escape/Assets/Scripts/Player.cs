@@ -44,6 +44,11 @@ namespace MazeEscape
 
         void Update()
         {
+            PlayerControl();
+        }
+
+        private void PlayerControl()
+        {
             float x = Input.GetAxis("Horizontal");
             float y = Input.GetAxis("Vertical");
             Vector3 movement = new Vector3(x, y, 0);

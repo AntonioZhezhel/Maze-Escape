@@ -11,7 +11,7 @@ namespace MazeEscape
         [SerializeField] private NavMeshAgent navMeshAgent;
 
         private Transform[] patrolPoints;
-        private int currentPatrolIndex = 0;
+        private int currentPatrolIndex;
 
         private void Start()
         {
@@ -38,7 +38,6 @@ namespace MazeEscape
         {
             if (patrolPoints.Length == 0)
             {
-                Debug.LogWarning("No patrol points assigned!");
                 return;
             }
 
