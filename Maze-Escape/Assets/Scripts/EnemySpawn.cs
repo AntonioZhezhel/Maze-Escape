@@ -8,8 +8,8 @@ namespace MazeEscape
     {
         [SerializeField] private GameObject enemyPrefab;
         [SerializeField] private GameObject Player;
-        [SerializeField] private int numberOfEnemies ;
-        [SerializeField] private float minDistanceBetweenEnemies ;
+        [SerializeField] private int numberOfEnemies;
+        [SerializeField] private float minDistanceBetweenEnemies;
         [SerializeField] private float minDistanceToPlayer;
 
         private void Start()
@@ -27,22 +27,21 @@ namespace MazeEscape
                 int y = Random.Range(0, maze.GetLength(1));
 
                 if (!maze[x, y].WallLeft && !maze[x, y].WallBottom &&
-                    IsDistanceEnough(new Vector2(x, y), createdPositions, minDistanceBetweenEnemies)&&
+                    IsDistanceEnough(new Vector2(x, y), createdPositions, minDistanceBetweenEnemies) &&
                     Vector2.Distance(new Vector2(x, y), Player.transform.position) > minDistanceToPlayer)
                 {
-                    Instantiate(enemyPrefab, new Vector3(x - (mazeGenerator.widthMaze-1) / 2f,
-                        y - (mazeGenerator.heightMaze-1 ) / 2f, 0), Quaternion.identity);
+                    Instantiate(enemyPrefab, new Vector3(x - (mazeGenerator.widthMaze - 1) / 2f,
+                        y - (mazeGenerator.heightMaze - 1) / 2f, 0), Quaternion.identity);
 
                     createdPositions.Add(new Vector2(x, y));
                     enemiesCreated++;
                 }
             }
         }
-        
+
         private bool IsDistanceEnough(Vector2 currentPosition, List<Vector2> createdPositions, float minDistance)
         {
             return createdPositions.All(position => !(Vector2.Distance(currentPosition, position) < minDistance));
         }
-
     }
 }

@@ -1,7 +1,5 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Serialization;
 
 namespace MazeEscape
 {
@@ -10,18 +8,20 @@ namespace MazeEscape
         [SerializeField] private float visionRadius;
         [SerializeField] private float attackRadius;
         [SerializeField] private float attackDamage;
-        [SerializeField] private float intervalDamage; 
+        [SerializeField] private float intervalDamage;
         [SerializeField] private NavMeshAgent navMeshAgent;
-        
+
         private GameObject player;
         private float timeSinceLastDamage;
 
         private void Start()
         {
-            navMeshAgent.updateRotation = false;
-            navMeshAgent.updateUpAxis = false;
             player = GameObject.FindGameObjectWithTag("Player");
             timeSinceLastDamage = intervalDamage;
+
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+            navMeshAgent.updateRotation = false;
+            navMeshAgent.updateUpAxis = false;
         }
 
         private void Update()
@@ -49,15 +49,17 @@ namespace MazeEscape
 
             RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, visionRadius,
                 LayerMask.GetMask("Wall", "Player"));
-            
+
             if (hit.collider != null && hit.collider.gameObject.CompareTag("Player"))
             {
                 if (distanceToPlayer <= attackRadius)
                 {
                     Damage();
                 }
+
                 return true;
             }
+
             return false;
         }
 
@@ -70,7 +72,6 @@ namespace MazeEscape
                 Player playerHealth = player.GetComponent<Player>();
                 playerHealth.TakeDamage(attackDamage);
             }
-            
         }
     }
 }
