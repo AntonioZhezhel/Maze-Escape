@@ -381,6 +381,7 @@
 "Assets/Scripts/MazeGenerator.cs"
 "Assets/Scripts/MazeSpawn.cs"
 "Assets/Scripts/Menu.cs"
+"Assets/Scripts/PatrolPointCreator.cs"
 "Assets/Scripts/Player.cs"
 "Assets/Scripts/VisionDetector.cs"
 "Assets/Scripts/Walls.cs"
