@@ -55,6 +55,8 @@
     <Compile Include="Assets\Scripts\VisionDetector.cs" />
     <Compile Include="Assets\Scripts\DamageDealer.cs" />
     <Compile Include="Assets\Scripts\PatrolPointCreator.cs" />
+    <Compile Include="Assets\Scripts\IEnemySpawner.cs" />
+    <Compile Include="Assets\Scripts\EnemySpawner.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.19f1\Editor\Data\PlaybackEngines\WindowsStandaloneSupport\Variations\mono\Managed\UnityEngine.dll</HintPath>
     </Reference>
