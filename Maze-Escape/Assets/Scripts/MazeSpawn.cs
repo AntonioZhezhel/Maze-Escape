@@ -8,7 +8,7 @@ namespace MazeEscape
         [SerializeField] private GameObject wallPrefab;
         [SerializeField] private GameObject finish;
         [SerializeField] private NavMeshSurface navMeshSurface;
-
+        
         private void Start()
         {
             MazeGenerator mazeGenerator = new MazeGenerator();
@@ -28,16 +28,8 @@ namespace MazeEscape
 
             navMeshSurface.BuildNavMesh();
 
-
-            MazeGeneratorWalls finishCell = mazeGenerator.GetFarthestCell();
-            float rotation = 0;
-            if (finishCell.x != 0 && finishCell.x != mazeGenerator.widthMaze - 1)
-            {
-                rotation = -90;
-            }
-
-            Instantiate(finish, new Vector3(finishCell.x - (mazeGenerator.widthMaze - 1) / 2f,
-                finishCell.y - (mazeGenerator.heightMaze - 1) / 2f), Quaternion.Euler(0, 0, rotation));
+            FinishCreator finishCreator = new FinishCreator(mazeGenerator.widthMaze, mazeGenerator.heightMaze);
+            finishCreator.CreateFinish(maze,finish);
         }
     }
 }

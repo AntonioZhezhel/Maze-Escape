@@ -2,7 +2,7 @@
 
 namespace MazeEscape
 {
-    public class PatrolPointCreator
+    public abstract class PatrolPointCreator
     {
         public static void CreatePatrolPoints(Transform parent, int numberOfPoints, float distance, ref Transform[] points)
         {
