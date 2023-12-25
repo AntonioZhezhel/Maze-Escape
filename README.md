@@ -6,16 +6,24 @@ Maze Escape.
 Main Task:
 The maze should be randomly and procedurally generated, always having a start and a
 finish. The maze should always be passable.
+
 ![Screenshot 1](https://github.com/AntonioZhezhel/Maze-Escape/assets/42389663/830cfba9-5a0b-45d5-acc4-c57c8fedd858)
+
 The player appears at the start of the maze, and when the player reaches the finish, he
 wins.
+
 ![Screenshot 2](https://github.com/AntonioZhezhel/Maze-Escape/assets/42389663/ae539c29-4edc-4b07-bfd6-0f3f73ddb86d)
+
 There are enemy seekers in the maze.
 Enemies have damage areas. When the player inside the damage area - game over.
+
 ![Screenshot 3](https://github.com/AntonioZhezhel/Maze-Escape/assets/42389663/0bc6b402-3f88-42f4-87a7-c8e6056981d0)
+
 Enemies have patrol paths.
 Until the enemy sees the player, he must follow his patrol path.
+
 ![Screenshot 4](https://github.com/AntonioZhezhel/Maze-Escape/assets/42389663/0644d70a-0980-42fb-85c8-93d1a695da24)
+
 Develop a flexible UI system and add Victory and Defeat screens in the game.
 Extra task (Optional):
 Enemies have damage areas.
