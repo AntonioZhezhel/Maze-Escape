@@ -1,57 +1,83 @@
-# Maze-Escape
-You are applying for the position of a Unity Developer at Estoty Game Studio.
-As part of the application process, you are required to create a mobile game using Unity.
-Game title:
-Maze Escape.
-Main Task:
-The maze should be randomly and procedurally generated, always having a start and a
-finish. The maze should always be passable.
+# Maze Escape
+
+Welcome to the Maze Escape game, a project developed for the Unity Developer position application at Estoty Game Studio.
+
+## Game Overview
+
+**Title:** Maze Escape
+
+**Objective:** Navigate through a procedurally generated maze, from the start to the finish, avoiding enemy seekers and their damage areas. Reach the finish to win the game.
+
+## Screenshots
 
 ![Screenshot 1](https://github.com/AntonioZhezhel/Maze-Escape/assets/42389663/830cfba9-5a0b-45d5-acc4-c57c8fedd858)
 
-The player appears at the start of the maze, and when the player reaches the finish, he
-wins.
+*Figure 1: Maze Start*
 
 ![Screenshot 2](https://github.com/AntonioZhezhel/Maze-Escape/assets/42389663/ae539c29-4edc-4b07-bfd6-0f3f73ddb86d)
 
-There are enemy seekers in the maze.
-Enemies have damage areas. When the player inside the damage area - game over.
+*Figure 2: Maze Finish*
 
 ![Screenshot 3](https://github.com/AntonioZhezhel/Maze-Escape/assets/42389663/0bc6b402-3f88-42f4-87a7-c8e6056981d0)
 
-Enemies have patrol paths.
-Until the enemy sees the player, he must follow his patrol path.
+*Figure 3: Enemy Damage Area*
 
 ![Screenshot 4](https://github.com/AntonioZhezhel/Maze-Escape/assets/42389663/0644d70a-0980-42fb-85c8-93d1a695da24)
 
-Develop a flexible UI system and add Victory and Defeat screens in the game.
-Extra task (Optional):
-Enemies have damage areas.
-Player has Health Points.
-While a player is inside a damage area he gets damage.
-Instead of instantly losing the game on damage area enter, the player will loose the
-game when his HP is below zero.
-Please add a Health bar in the game UI.
-When the player is inside of the damage area the enemy starts to follow the player.
-If the enemy is following the player and looses sight of the player, the enemy will travel
-to the last seen location of the player, and return to patrol mode if the player is not
-noticed again.
-It is important for us to understand:
-● How well do you know how to write clean code and use SOLID
-● How well do you know and use design patterns
-● How well you build initialization order in the project
-● How well do you know how to write optimized code in Unity
-● How well do you structure the project
-● How well do you work with prefabs
-● Which variables you reveal to game / level designers and how are they accessed
-It will be a plus if you will use Dependency Injection, especially Zenject Framework.
-You can choose whether the final game will be in 2D or 3D.
-You can use any available assets for game visuals.
-You can use any plugin for Pathfinding.
-You can’t use third party solutions for anything except Pathfinding.
-You can’t use the Singleton pattern.
-Please use Unity version 2021.3.19f1
+*Figure 4: Enemy Patrol Path*
 
+## Game Features
+
+1. **Procedural Maze Generation:**
+   - The maze is randomly and procedurally generated, ensuring a path from start to finish.
+
+2. **Player Movement:**
+   - The player appears at the start of the maze and can navigate through it.
+
+3. **Enemy Seekers:**
+   - Enemies with damage areas are present in the maze.
+   - Game over when the player enters an enemy's damage area.
+
+4. **Enemy Patrol Paths:**
+   - Enemies follow patrol paths until they detect the player.
+
+5. **Flexible UI System:**
+   - Victory and Defeat screens are implemented in the game.
+
+6. **Optional Health System:**
+   - Player has Health Points (HP).
+   - Damage is dealt while inside an enemy's damage area.
+   - Game over when HP falls below zero.
+   - Health bar added to the UI.
+   - Enemy follows the player if inside the damage area.
+
+## Game Development Focus
+
+This project emphasizes various aspects of game development to evaluate your skills:
+- Writing clean code and using SOLID principles.
+- Knowledge and application of design patterns.
+- Initialization order in the project.
+- Code optimization in Unity.
+- Project structure and organization.
+- Working with prefabs.
+- Variable access for game/level designers.
+
+## Extra Task
+
+If you choose to complete the optional task:
+- Implement a health system where the player loses the game when HP is below zero.
+- Use Dependency Injection, especially the Zenject Framework.
+
+## Guidelines
+
+- Unity version: 2021.3.19f1
+- Game can be in 2D or 3D.
+- Use any available assets for visuals.
+- Use any pathfinding plugin.
+- Avoid third-party solutions except for pathfinding.
+- Avoid using the Singleton pattern.
+
+Feel free to showcase your creativity and problem-solving skills in this project. Good luck!
 ## DamageDealer Class Documentation
 
 ### Description
