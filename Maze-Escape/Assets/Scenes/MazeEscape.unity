@@ -1060,6 +1060,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1793446297}
   - component: {fileID: 1793446298}
+  - component: {fileID: 1793446299}
   m_Layer: 0
   m_Name: MazeSpawn
   m_TagString: Untagged
@@ -1097,3 +1098,16 @@ MonoBehaviour:
   wallPrefab: {fileID: 4055269225821353062, guid: af745bc0f1e8ed541901f93706230de3, type: 3}
   finish: {fileID: 7981678541085614192, guid: dda7c474248309b48924074397e48e96, type: 3}
   navMeshSurface: {fileID: 394819672}
+  finishCreator: {fileID: 1793446299}
+--- !u!114 &1793446299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793446296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc62249b11d546098ed294fc1a4883b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
