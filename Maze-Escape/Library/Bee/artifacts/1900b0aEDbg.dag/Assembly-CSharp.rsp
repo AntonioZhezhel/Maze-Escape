@@ -379,6 +379,7 @@
 "Assets/Scripts/EnemySpawn.cs"
 "Assets/Scripts/EnemySpawner.cs"
 "Assets/Scripts/Finish.cs"
+"Assets/Scripts/FinishCreator.cs"
 "Assets/Scripts/Interface/IEnemySpawner.cs"
 "Assets/Scripts/MazeGenerator.cs"
 "Assets/Scripts/MazeGeneratorWalls.cs"
@@ -387,6 +388,7 @@
 "Assets/Scripts/PatrolPointCreator.cs"
 "Assets/Scripts/Player.cs"
 "Assets/Scripts/VisionDetector.cs"
+"Assets/Scripts/WallCreator.cs"
 "Assets/Scripts/Walls.cs"
 -langversion:9.0
 
