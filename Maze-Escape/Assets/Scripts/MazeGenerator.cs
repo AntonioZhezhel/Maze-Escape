@@ -2,15 +2,15 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace MazeEscape
-{ 
-    public class MazeGenerator : MonoBehaviour , IMazeGenerator
+{
+    public class MazeGenerator : MonoBehaviour
     {
         [SerializeField] public int widthMaze = 15;
         [SerializeField] public int heightMaze = 10;
 
         private MazeGeneratorWalls farthest;
 
-        
+
         public MazeGeneratorWalls[,] GenerateMaze()
         {
             MazeGeneratorWalls[,] maze = new MazeGeneratorWalls[widthMaze, heightMaze];
